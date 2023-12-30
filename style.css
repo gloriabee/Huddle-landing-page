@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
+:root{
+    --bg-color:hsl(257, 40%, 49%);
+    --soft-magnet:hsl(300, 69%, 71%);
+    --fw-head-400:400;
+    --fw-head-600:600;
+    --fw-body-400:400;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg-color);
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+/* container */
+.container{
+    padding: 20px 5%;
+}
+
+/* navigation */
+
+nav img{
+    width: 150px;
+    height: 100px;
+}
+
+/* content section */
+
+.content{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.content>.text-content{
+    width: 400px;
+    padding: 20px 50px;
+}
+
+.text-content h1{
+    color: white;
+    font-weight: var(--fw-head-600);
+}
+
+.text-content p{
+    font-weight: var(--fw-body-400);
+    color: rgb(214, 211, 211);
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.btn-reg{
+    padding: 10px 40px;
+    background-color: white;
+    color: var(--bg-color);
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+.btn-reg:hover{
+    background-color: var(--soft-magnet);
+    color: white;
+}
+
+footer{
+    display: flex;
+    justify-content: end;
+}
+.social-icons i{
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    padding: 10px 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    margin-right: 6px;
+}
+
+.social-icons>a:hover i{
+    color: var(--soft-magnet);
+    border-color: var(--soft-magnet);
+}
+
+@media screen and (max-width:1200px){
+    .container{
+        padding: 5% 7%;
+    }
+    .img-content{
+     width:50%;
+        height: auto;
+        
+    }
+
+    .img-content>img{
+        width: 100%;
+    }
+
+    .text-content{
+     width:50%;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width:768px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container{
+        padding: 2% 3%;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+   }
+  .img-content{
+    width: 300px;
+   }
+   .content>.text-content{
+    text-align: center;
+    width: 300px;
+   }
+
+   .content>.text-content h1{
+    font-size: 24px;
+   }
+
+   footer{
+    margin: 30px;
+    justify-content: center;
+   }
+}
